@@ -1,0 +1,58 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+
+int main() {
+    // Write C code here
+    int size;
+    printf("Enter the size of the array\n");
+    scanf("%d",&size);
+    int array[size];
+    printf("Enter all the elements in the array\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&array[i]);
+    }
+    char answer[10];
+    while(1){
+    printf("Do u want to change the elements in the array\n");
+    scanf("%s",&answer);
+    int temp[size+1];
+    switch(answer[0])
+    {
+        case 'y':
+            int pos,ele,j=0;
+            printf("Enter the value of the element and its position\n");
+            scanf("%d%d",&ele,&pos);
+            size=size+1;
+            for(int i=0;i<size;i++)
+            {
+                if(i==pos)
+                {
+                    temp[i]=ele;
+                    j++;
+                    temp[i+j]=array[i];
+                }
+                else
+                    temp[i+j]=array[i];
+            }
+            for(int j=0;j<size;j++)
+            {
+                array[j]=temp[j];
+            }
+            printf("New array after entering new value is \n");
+            for(int j=0;j<size;j++)
+            {
+                printf("%d",temp[j]);
+            }
+            printf("\n\n");
+            
+            break;
+        case 'n':
+                printf(\nIm exiting troubling the user\n");
+                exit(0);
+            
+    }
+    }
+    return 0;
+}
