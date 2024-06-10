@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    int len;
+    char name[10];
+    printf("Enter your name\n");
+    scanf("%s",name);
+    len=strlen(name);
+    for(int i=0;i<len;i++)
+    {
+        for(int j=0;j<=i;j++)
+        {
+            
+            printf("%c\t",name[j]);
+            
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
