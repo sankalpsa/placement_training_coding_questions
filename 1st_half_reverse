@@ -1,0 +1,26 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int size;
+    printf("Enter the size of the array\n");
+    scanf("%d",&size);
+    int array[size];
+    printf("Enter all the elements in the array\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&array[i]);
+    }
+    int half=size/2;
+    for(int i=half-1;i>=0;i--)
+    {
+        printf("%d",array[i]);
+    }
+    for(int j=half;j<size;j++)
+    {
+        printf("%d",array[j]);
+    }
+    
+    return 0;
+}
