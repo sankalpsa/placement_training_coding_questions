@@ -1,0 +1,34 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int size;
+    printf("Enter the size of the array\n");
+    scanf("%d",&size);
+    int array[size];
+    printf("Enter all the elements in the array\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&array[i]);
+    }
+    int rot,temp;
+    printf("No of left shift rotations\n");
+    scanf("%d",&rot);
+    for(int k=0;k<rot;k++)
+    {
+        temp=array[0];
+        for(int i=0;i<size;i++)
+        {
+            array[i]=array[i+1];
+        }
+        array[size-1]=temp;
+    }
+    printf("Array after rootating is \n");
+    for(int i=0;i<size;i++)
+    {
+        printf("%d",array[i]);
+    }
+    
+    return 0;
+}
