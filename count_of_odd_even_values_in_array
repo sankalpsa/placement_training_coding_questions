@@ -1,0 +1,25 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int size;
+    printf("Enter the size of the array\n");
+    scanf("%d",&size);
+    int array[size];
+    printf("Enter all the elements in the array\n");
+    for(int i=0;i<size;i++)
+    {
+        scanf("%d",&array[i]);
+    }
+    int odd=0,even=0;
+    for(int i=0;i<size;i++)
+    {
+        if(array[i]%2==0)
+            even++;
+    }
+    odd=size-even;
+    printf("No.of odd and even elements in array are %d and %d respectively\n",odd,even);
+    
+    return 0;
+}
