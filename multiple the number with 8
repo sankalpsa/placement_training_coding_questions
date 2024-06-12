@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+    printf("Enter any number\n");
+    scanf("%d",&number);
+    int mul=number;;
+    for(int i=0;i<7;i++)
+    {
+        mul=mul+number;
+    }
+    printf("%d X 8 = %d\n",number,mul);
+    return 0;
+}
