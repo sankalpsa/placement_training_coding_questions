@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+    char name[10];
+    printf("Enter your name\n");
+    scanf("%s",name);
+    int len=strlen(name);
+    for(int i=0;i<len;i++)
+    {
+        for(int j=1;j<len;j++)
+        {
+            if(name[i]==name[j])
+                continue;
+            else
+                printf("%c\n",name[i]);
+                exit(0);
+        }
+    }
+    return 0;
+}
