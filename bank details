@@ -1,0 +1,59 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+int main() {
+    char pin[4];
+    char pass[]={"1234"};
+    int bal=40000;
+    printf("ENTER YOUR SECRET PIN NUMBER:");
+    scanf("%s",pin);
+    if(strcmp(pin,pass)==0)
+    {
+        printf("********Welcome to ATM Service****************\n");
+        printf("1.Check Balance\n2.Withdrwa cashn\n3.Deposite Cash\n4.Quit\n");
+        for(int i=0;i<40;i++)
+        {
+            printf("*");
+        }
+        int with=0,depo=0,choice;
+        while(1)
+        {
+            printf("\nEnter your choice\n");
+            scanf("%d",&choice);
+            switch(choice)
+            {
+                case 1:
+                    printf("Your balance is %d\n",bal);
+                    break;
+                case 2:
+                    printf("Enter the amount you want to withdraw\n");
+                    scanf("%d",&with);
+                    if(bal>=with)
+                    {
+                    bal=bal-with;
+                    printf("Your balance is %d now\n",bal);
+                    printf("Printing the money\n");
+                    }
+                    else
+                        printf("Insufficient balance");
+                    break;
+                case 3:
+                    printf("Enter the amount your are depositing\n");
+                    scanf("%d",&depo);
+                    bal=bal+depo;
+                    printf("Now your balance is %d\n",bal);
+                    break;
+                case 4:
+                    printf("Quitting.......");
+                    exit(0);
+                    
+                    
+            }
+        }
+    }
+    else
+        exit(0);
+    return 0;
+}
